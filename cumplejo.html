@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Marck+Script&display=swap" rel="stylesheet" />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="corazones.css" />
+    <title>San Valentin Carta 1v</title>
+</head>
+<body>
+    <h1>¡Feliz Cumpleaños mi niño hermoso! ❤️</h1>
+    <div class="contenedor">
+        <div class="envoltura-sobre">
+            <div class="sobre">
+                <div class="carta">
+                    <div class="contenido">
+                        <strong>Querido amor</strong>
+                        <div class="letter">
+                            <p>Hoy es <strong>tu cumpleaños</strong>, el día oficial de las <em>velitas</em>, los <em>deseos</em> y los abrazos apretaditos (de esos que duran más de 5 segundos y arreglan el mundo).</p>
+                            <p>Así que prepárate, porque aquí va la mía: <br />Gracias por dejarme acompañarte en otra etapa más de tu vida, por permitirme ser testigo de tu crecimiento, de tus logros y de todo lo que estás construyendo.</p>
+                            <p>Me llena el corazón verte avanzar, ver cómo sonríes, cómo te esfuerzas y cómo sigues adelante.<br />Estar a tu lado, tanto en tus días felices como en los difíciles, es un regalo que valoro con todo mi corazón.</p>
+                            <p>Si fueras un código, serías uno bien limpio: sin errores, pero con miles de líneas que me enamoran cada día.<br />Si fueras un bug, serías ese que jamás querría corregir.<br />Y si fueras una app, serías la que siempre tengo anclada en mi pantalla principal.</p>
+                            <p><strong>Feliz cumpleaños</strong>, mi <em>niño de ojitos bonitos</em>. Que este nuevo año de vida venga lleno de recompensas, aventuras y momentos que te hagan sentir tan amado como tú me haces sentir a mí.</p>
+                            <p>Siempre tuya,<br />Tu niña que te ama...<br />La que siempre te llama <em>"mi niño de ojitos bonitos"</em>.</p>
+                            <p style="font-size: 0.9em; color: grey;">PD: Si esta carta fuera un programa, su salida sería:</p>
+                            <code>"Eres lo mejor que me ha pasado. Feliz cumpleaños, amor."</code>
+                        </div>                          
+                    </div>
+                </div>
+            </div>
+            <div class="corazon"></div>
+            <div class="solapa-derecha"></div>
+            <div class="solapa-izquierda"></div>
+        </div>
+    </div>
+
+    <!-- Scripts y corazones -->
+    <script src="script_v2.js"></script>
+    <script src="main.js"></script>
+    <script src="mensajes.js"></script>
+
+    <div id="corazones-container"></div>
+    <script src="corazones.js"></script>
+
+    <!-- Audio sin controles -->
+<audio id="musica-cumple" src="Yung Kai - Blue.mp3" loop></audio>
+<script>
+      // Reproduce la música al primer clic del usuario
+      window.addEventListener('click', () => {
+        const audio = document.getElementById('musica-cumple');
+        if (audio.paused) {
+          audio.play().catch(e => {
+            console.log('Error al reproducir:', e);
+          });
+        }
+      }, { once: true });
+    </script>
+    <script>
+  const musica = document.getElementById("musica-cumple");
+
+  document.addEventListener("click", () => {
+    musica.play().catch(error => {
+      console.log("Error al reproducir la música:", error);
+    });
+  });
+</script>
+
+</body>
+</html>

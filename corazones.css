@@ -1,0 +1,30 @@
+/* Corazones flotantes */
+
+.corazon-flotante {
+  position: absolute;
+  bottom: 0;
+  width: 20px;
+  height: 20px;
+  background-color: var(--corazon); /* usa tu variable de color */
+  clip-path: polygon(
+    50% 0%, 61% 8%, 68% 15%, 75% 23%, 80% 30%,
+    85% 38%, 88% 45%, 90% 53%, 90% 62%, 85% 70%,
+    80% 78%, 73% 85%, 65% 92%, 55% 98%, 45% 92%,
+    37% 85%, 30% 78%, 25% 70%, 20% 62%, 20% 53%,
+    22% 45%, 25% 38%, 30% 30%, 35% 23%, 42% 15%, 49% 8%
+  );
+  animation-name: flotar;
+  animation-timing-function: linear;
+  animation-iteration-count: 1;
+}
+
+@keyframes flotar {
+  0% {
+    transform: translateY(0) scale(1);
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(-100vh) scale(0.5);
+    opacity: 0;
+  }
+}
